@@ -1,0 +1,33 @@
+#!/bin/python3
+
+# import the random library
+import random
+# define variable 'chars'
+# include characters and symbols that can be used in a randomly generated password
+chars='abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()[];,./?><:{}|=-_+~'
+
+# define variable 'length'
+# prompt the user for input to determine how long they want their password
+length = input('Password length: ')
+# convert input to whole integers
+length = int(length)
+
+# define variable 'number'
+# prompt the user for input to determine how many passwords they want generated
+number = input('Number of passwords:')
+# convert input to whole integers
+number = int(number)
+
+# determine the number of passwords a user wants based on user input
+for p in range(number):
+    # define variable password, which is empty
+    password = ''
+    # determine how long the user wants their password to be
+    for c in range(length):
+        # build 'password' variable with randomly chosen characters from 'chars' variable
+        password += random.choice(chars)
+    # display the output for the user
+    print(password)
+
+
+
